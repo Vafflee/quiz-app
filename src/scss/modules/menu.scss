@@ -1,0 +1,121 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__section {
+        border-radius: 15px;
+        box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
+        background: var(--light);
+        padding: 1em;
+        margin: 0 0 1em 0;
+    }
+
+    &__group:not(:last-child) {
+        margin-bottom: 1em;
+    }
+
+    &__subtitle {
+        margin-bottom: 0.5em;
+        color: var(--grey);
+    }
+
+    &__options {
+        display: grid;
+        grid-template: auto / 1fr 1fr 1fr 1fr;
+        @include s7 {
+            grid-template: auto / 1fr 1fr;
+        }
+        @include s4 {
+            grid-template: auto / 1fr;
+        }
+        gap: 1em;
+    }
+
+    &__option {
+        position: relative;
+        
+        &-delete {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+
+            background: var(--light);
+            border: 2px var(--primary) solid;
+            border-radius: 50%;
+            transition: 0.2s;
+
+            img {
+                width: 70%;
+                height: 70%;
+            }
+
+            &:hover {
+                background: rgb(255, 135, 135);
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        @include s4 {
+            margin-bottom: 0.5em;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        @include s4 {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__create {
+        padding: 0.6em 1em;
+        margin-right: 1em;
+        @include s4 {
+            margin-right: 0;
+        }
+    }
+
+    &__input {
+        padding: 0.6em 1em;
+        cursor: pointer;
+        border-radius: 15px 0 0 15px ;
+        border: 2px solid var(--primary_active);
+        border-right: none;
+        font-size: 14px;
+        color: var(--grey);
+        display: flex;
+        align-items: center;
+        background: var(--light);
+        
+        &:hover {
+            background: var(--light_hover);
+        }
+
+        &:active {
+            background: var(--light);
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            background: url('../../img/arrow-up.svg') no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__submit {
+        border-radius: 0 15px 15px 0;
+    }
+}

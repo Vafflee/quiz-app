@@ -1,0 +1,45 @@
+.button {
+  // background: var(--primary);
+  background: linear-gradient(-190deg, #BD7AE3 0%, #8461C9 100%);
+
+  border: none;
+  border-radius: 15px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--light);
+  padding: 0.4em 1em;
+
+  transition: 0.1s;
+  cursor: pointer;
+  &:hover {
+    // background: var(--primary_hover);
+    background: linear-gradient(-190deg, #bd7ae3 0%, #8a67d1 100%);
+
+  }
+  &:active {
+    // background: var(--primary_active);
+    background: linear-gradient(-190deg, #c582ec 0%, #8f6bd6 100%);
+  }
+}
+
+.button-outline {
+  background: var(--light);
+  border: solid 2px var(--primary);
+  border-radius: 15px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey);
+  padding: 0.4em 1em;
+
+  transition: 0.1s;
+  cursor: pointer;
+  &:hover {
+    background: var(--light_hover);
+  }
+  &:active {
+    background: var(--light_active);
+    color: var(--light);
+  }
+}

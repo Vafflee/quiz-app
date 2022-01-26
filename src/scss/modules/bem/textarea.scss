@@ -1,0 +1,21 @@
+textarea {
+  resize: none;
+}
+.textarea {
+    appearance: none;
+    border: none;
+    border-radius: 0.5em;
+    background: var(--background);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0 0.4em;
+    &::placeholder {
+      text-align: center;
+      transition: 0.2s;
+    }
+    &:focus {
+      outline: none;
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  }

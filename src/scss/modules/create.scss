@@ -1,0 +1,103 @@
+.create {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3em;
+    padding: 0 1em;
+
+    &__info {
+        border-radius: 15px;
+        box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
+        background: var(--light);
+        padding: 1em;
+        margin-bottom: 0.5em;
+    }
+    
+    counter-reset: question;
+    &__questions {
+        display: grid;
+        gap: 1em;
+    }
+
+    &__title {
+        margin-bottom: 0.7em;
+    }
+
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.7em;
+
+        @include s4 {
+            flex-direction: column;
+        }
+
+        &-label {
+            margin-right: 1em;
+        }
+
+        &-input {
+            min-width: 300px;
+            @include s7 {
+                flex: 1 1 auto;
+                min-width: 0;
+                max-width: 200px;
+            }
+            @include s4 {
+                max-width: none;
+            }
+        }
+    }
+
+    &__add-question {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        width: 1.5em;
+        height: 1.5em;
+        padding: 0.2em;
+        font-size: 1.5em;
+        color: var(--light);
+        cursor: pointer;
+
+        margin-bottom: 1em;
+    }
+
+    &__requirements {
+        align-self: center;
+        // margin: 1em 0 0 0;
+        max-width: 400px;
+        font-size: 13px;
+        line-height: normal;
+    }
+
+    &__buttons {
+        display: flex;
+        margin-bottom: 2em;
+        @include s4 {
+            flex-direction: column;
+        }
+    }
+
+    &__start {
+        @include s4 {
+            margin-bottom: 1.5em;
+        }
+    }
+
+    &__download {
+        margin-right: 0.5em;
+        @include s4 {
+            margin-right: 0;
+            margin-bottom: 0.5em;
+        }
+    }
+
+    &__exit {
+        margin-right: auto;
+        @include s4 {
+            margin-right: 0;
+            order: 1;
+        }
+    }
+}

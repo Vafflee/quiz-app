@@ -1,0 +1,59 @@
+$containerSize: 800;
+
+$md1: 320;
+$md2: 480;
+$md3: 768;
+$md4: 992;
+$md5: 1200;
+$md6: 1500;
+
+@mixin s15 {
+  @media (max-width: $md6 + px) {
+    @content;
+  }
+}
+@mixin s12 {
+  @media (max-width: $md5 + px) {
+    @content;
+  }
+}
+@mixin s9 {
+  @media (max-width: $md4 + px) {
+    @content;
+  }
+}
+@mixin s7 {
+  @media (max-width: $md3 + px) {
+    @content;
+  }
+}
+@mixin s4 {
+  @media (max-width: $md2 + px) {
+    @content;
+  }
+}
+@mixin s3 {
+  @media (max-width: $md1 + px) {
+    @content;
+  }
+}
+
+
+@mixin font($font_name, $file_name, $weight, $style, $stretch, $variant) {
+    @font-face {
+        font-family: $font_name;
+        src: url("../../fonts/#{$file_name}.woff") format("woff"),
+             url("../../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: $weight;
+        font-style: $style;
+        font-stretch: $stretch;
+        font-variant: $variant;
+    }
+}
+
+@mixin adaptive-value($property, $startSize, $minSize) {
+	#{$property}: $startSize + px;
+	@media (max-width: 1400px) {
+		#{$property}: calc(#{$minSize + px} + #{$startSize - $minSize} * ((100vw - 320px) / #{1400 - 320}));
+	}
+}

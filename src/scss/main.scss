@@ -1,0 +1,27 @@
+@import "./modules/base.scss";
+@import "./modules/mixins.scss";
+@import "./modules/values.scss";
+@import "./modules/fonts.scss";
+@import "./modules/header.scss";
+@import "./modules/main-section.scss";
+@import "./modules/bem/button.scss";
+@import "./modules/bem/text-input.scss";
+@import "./modules/bem/textarea.scss";
+@import "./modules/bem/question-edit.scss";
+@import "./modules/bem/wrong-answer-edit.scss";
+
+.page-container {
+  background: var(--background);
+  font-family: SF-Pro, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@import "./modules/game.scss";
+@import "./modules/menu.scss";
+@import "./modules/create.scss";
+@import "./modules/start.scss";
+@import "./modules/question.scss";
+@import "./modules/end.scss";
+@import "./modules/footer.scss";

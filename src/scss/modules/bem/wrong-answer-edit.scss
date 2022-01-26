@@ -1,0 +1,31 @@
+.wrong-answer-edit {
+    display: flex;
+    align-items: center;
+
+    &__delete-answer {
+        display: inline-block;
+        background: transparent;
+        border: none;
+        margin-left: 0.5em;
+        opacity: 0.9;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+
+        img {
+            height: 0.6em;
+        }
+    }
+
+    &__text {
+        @include s4 {
+            flex: 1 0 auto;
+        }
+    }
+}
